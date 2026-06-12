@@ -13,14 +13,16 @@ Your project is committed locally. Follow these steps to publish it.
 
 ## 2. Push your code
 
-Open a terminal in this folder and run (replace `YOUR_USERNAME`):
+Open a terminal in this folder and run:
 
 ```powershell
 cd "c:\Users\Abdourazak Mlazema\Downloads\Wedding Planning App UI"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/nikah-planner.git
+git remote add origin https://github.com/moinaalia/nikah-planner.git
 git push -u origin main
 ```
+
+> Remote is already configured for **moinaalia/nikah-planner**. Create the empty repo on GitHub first, then push.
 
 ## 3. Open in VS Code
 

@@ -2,6 +2,8 @@
 
 Elegant, Islamic-friendly wedding planning application with a **Flutter Android app** and a **React web UI prototype**.
 
+**GitHub:** [github.com/moinaalia/nikah-planner](https://github.com/moinaalia/nikah-planner) · **Profil:** [github.com/moinaalia](https://github.com/moinaalia)
+
 ## Projects
 
 | Folder | Stack | Description |
@@ -48,3 +50,7 @@ flutterfire configure
 ## License
 
 Student / educational project.
+
+## For reviewers / professors
+
+See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for project summary, verification checklist, and email template.
