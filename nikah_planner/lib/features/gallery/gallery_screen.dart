@@ -70,7 +70,6 @@ class _GalleryScreenState extends State<GalleryScreen> {
                 delegate: SliverChildBuilderDelegate(
                   (context, i) {
                     final item = filtered[i];
-                    final tall = i % 3 == 0;
                     return GestureDetector(
                       onTap: () => setState(() => _selected = item),
                       child: ClipRRect(

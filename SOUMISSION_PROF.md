@@ -9,6 +9,23 @@
 | **Lien du dépôt** | https://github.com/moinaalia/nikah-planner |
 | **Profil public** | https://github.com/moinaalia |
 
+## Publication sur GitHub
+
+> **Important :** le dépôt doit être en ligne avant d'envoyer les liens au professeur.
+
+### Option A — Script automatique
+
+```powershell
+cd "c:\Users\Abdourazak Mlazema\Downloads\Wedding Planning App UI"
+.\PUBLIER_GITHUB.ps1
+```
+
+### Option B — Manuel
+
+Voir [GITHUB_PUBLISH.md](GITHUB_PUBLISH.md).
+
+---
+
 ## Message à envoyer au professeur (copier-coller)
 
 ```

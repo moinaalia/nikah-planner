@@ -1,53 +1,39 @@
-# Publish to GitHub
+# Publier sur GitHub
 
-Your project is committed locally. Follow these steps to publish it.
+## Méthode rapide (recommandée)
 
-## 1. Create a GitHub repository
-
-1. Go to [https://github.com/new](https://github.com/new)
-2. Repository name: `nikah-planner` (or your choice)
-3. Description: `Elegant Islamic-friendly wedding planning app — Flutter + React UI`
-4. Choose **Public**
-5. Do **not** add README, .gitignore, or license (already in project)
-6. Click **Create repository**
-
-## 2. Push your code
-
-Open a terminal in this folder and run:
+1. Ouvrez PowerShell dans ce dossier
+2. Exécutez :
 
 ```powershell
 cd "c:\Users\Abdourazak Mlazema\Downloads\Wedding Planning App UI"
-git branch -M main
-git remote add origin https://github.com/moinaalia/nikah-planner.git
+.\PUBLIER_GITHUB.ps1
+```
+
+3. Connectez-vous à GitHub quand demandé (compte **moinaalia**)
+4. Le script crée le dépôt et envoie le code automatiquement
+
+## Méthode manuelle
+
+### 1. Créer le dépôt
+
+[https://github.com/new?name=nikah-planner](https://github.com/new?name=nikah-planner)
+
+- Compte : **moinaalia**
+- Visibilité : **Public**
+- Ne pas ajouter README / .gitignore / licence
+
+### 2. Pousser le code
+
+```powershell
+cd "c:\Users\Abdourazak Mlazema\Downloads\Wedding Planning App UI"
 git push -u origin main
 ```
 
-> Remote is already configured for **moinaalia/nikah-planner**. Create the empty repo on GitHub first, then push.
+### 3. Vérifier
 
-## 3. Open in VS Code
+Ouvrez [https://github.com/moinaalia/nikah-planner](https://github.com/moinaalia/nikah-planner) — vous devez voir vos fichiers.
 
-```powershell
-code "c:\Users\Abdourazak Mlazema\Downloads\Wedding Planning App UI"
-```
+## Envoyer au professeur
 
-Install extensions when prompted:
-- **Dart**
-- **Flutter**
-
-Press **F5** → select **Nikah Planner (Flutter)** to run the app.
-
-## 4. Open in Android Studio
-
-1. Open Android Studio → **Open** → select the `nikah_planner` folder
-2. Wait for Gradle sync
-3. Connect a phone or start an emulator
-4. Click the green **Run** button
-
-## Optional: GitHub CLI
-
-After installing GitHub CLI (`winget install GitHub.cli`):
-
-```powershell
-gh auth login
-gh repo create nikah-planner --public --source=. --remote=origin --push
-```
+Voir [SOUMISSION_PROF.md](SOUMISSION_PROF.md) pour le message à copier-coller.
