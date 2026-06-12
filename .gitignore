@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.nikah_planner/build/
+nikah_planner/build/
+
+# Flutter / Dart
+nikah_planner/.dart_tool/
+nikah_planner/.flutter-plugins
+nikah_planner/.flutter-plugins-dependencies
+nikah_planner/.pub/
+nikah_planner/.pub-cache/
+nikah_planner/android/local.properties
+nikah_planner/android/.gradle/
+nikah_planner/android/app/debug/
+nikah_planner/android/app/profile/
+nikah_planner/android/app/release/
+
+# IDE
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS & env
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.log
+
+# Secrets
+**/google-services.json
+**/GoogleService-Info.plist
+**/firebase_options.dart.bak
