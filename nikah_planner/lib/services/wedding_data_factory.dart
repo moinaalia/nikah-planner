@@ -20,7 +20,7 @@ class WeddingDataFactory {
   }) {
     final id = 'wed_${DateTime.now().millisecondsSinceEpoch}';
     final dateLabel = WeddingTraditionsCatalog.formatDate(weddingDate);
-    final v = venue ?? 'Lieu a confirmer';
+    final v = venue ?? 'Venue to be confirmed';
 
     final country = WeddingTraditionsCatalog.countryByCode(countryCode);
     final type = WeddingTraditionsCatalog.typeFor(countryCode, weddingTypeId);
@@ -67,8 +67,8 @@ class WeddingDataFactory {
         AppNotification(
           id: 1,
           type: 'welcome',
-          title: 'Bienvenue sur Nikah Planner!',
-          body: 'Votre planning $countryName ($typeName) est pret. Suivez chaque etape de votre mariage.',
+          title: 'Welcome to Nikah Planner!',
+          body: 'Your $countryName ($typeName) planning is ready. Follow every step of your wedding.',
           time: 'Maintenant',
           read: false,
         ),

@@ -1,231 +1,262 @@
-# Journal de bord & Rapport technique — CAT Mobile Application
+# Logbook & Technical Report — CAT Mobile Application
 
-**Module :** Développement d'applications mobiles  
-**Projet :** Nikah Planner — Application de planification de mariage  
-**Étudiant :** Hadidja Aliani  
-**ID étudiant :** BIT/2023/62116  
-**Compte GitHub :** [moinaalia](https://github.com/moinaalia)  
-**Dépôt source :** https://github.com/moinaalia/nikah-planner  
-**Date de soumission :** Juin 2026  
-
----
-
-## Table des matières
-
-1. [Vue d'ensemble du projet](#1-vue-densemble-du-projet)
-2. [Couverture des fonctionnalités CAT](#2-couverture-des-fonctionnalités-cat)
-3. [Modules implémentés](#3-modules-implémentés)
-4. [Grille de notation (auto-évaluation)](#4-grille-de-notation-auto-évaluation)
-5. [Architecture technique](#5-architecture-technique)
-6. [Stockage local et récupération des données](#6-stockage-local-et-récupération-des-données)
-7. [Réseau et consommation d'API](#7-réseau-et-consommation-dapi)
-8. [Gestion des erreurs](#8-gestion-des-erreurs)
-9. [Phases de développement (logbook)](#9-phases-de-développement-logbook)
-10. [Instructions de test et démonstration](#10-instructions-de-test-et-démonstration)
-11. [Captures d'écran requises](#11-captures-décran-requises)
-12. [Questions de révision](#12-questions-de-révision)
-13. [Références](#13-références)
-14. [Annexes](#14-annexes)
+**Module:** Mobile Application Development  
+**Project:** Nikah Planner — Wedding planning mobile app  
+**Student:** Hadidja Aliani  
+**Student ID:** BIT/2023/62116  
+**GitHub account:** [moinaalia](https://github.com/moinaalia)  
+**Source repository:** https://github.com/moinaalia/nikah-planner  
+**Submission date:** June 2026  
 
 ---
 
-## 1. Vue d'ensemble du projet
+## Table of contents
 
-### 1.1 Contexte
+1. [Project overview](#1-project-overview)
+2. [CAT requirements coverage](#2-cat-requirements-coverage)
+3. [Implemented modules](#3-implemented-modules)
+4. [Grading (instructor)](#4-grading-instructor)
+5. [Technical architecture](#5-technical-architecture)
+6. [Local storage and data retrieval](#6-local-storage-and-data-retrieval)
+7. [Networking and API consumption](#7-networking-and-api-consumption)
+8. [Error handling](#8-error-handling)
+9. [Development phases (logbook)](#9-development-phases-logbook)
+10. [Testing and demonstration instructions](#10-testing-and-demonstration-instructions)
+11. [Required screenshots](#11-required-screenshots)
+12. [Revision questions](#12-revision-questions)
+13. [References](#13-references)
+14. [Appendices](#14-appendices)
 
-Nikah Planner est une application mobile Android permettant aux couples de planifier leur mariage : budget, invités, planning des cérémonies, prestataires et notifications. Le projet poursuit le prototype UI développé en début de semestre et l'intègre dans une application Flutter complète.
+---
 
-### 1.2 Objectifs CAT
+## 1. Project overview
 
-Développer une application mobile complète intégrant les concepts des semaines 1 à 5 :
+### 1.1 Context
 
-| Exigence CAT | Implémentation Nikah Planner |
-|--------------|------------------------------|
-| User Interface Design | 13 écrans Material Design, thème or/sauge |
-| Navigation | `go_router` + barre de navigation à 5 onglets |
-| Event Handling | Boutons, formulaires, filtres, `onTap`, `onChanged` |
-| Local Data Storage | Données locales (`mock_data.dart`) + `SharedPreferences` |
-| Data Retrieval | Lecture des données pour chaque écran |
+Nikah Planner is an Android mobile application that helps couples plan their wedding: budget, guest list, ceremony schedule, vendors, and notifications. This project extends the UI prototype developed earlier in the semester into a full Flutter application.
+
+### 1.2 CAT objectives
+
+Build a complete mobile application covering concepts from weeks 1 to 5:
+
+| CAT requirement | Nikah Planner implementation |
+|-----------------|------------------------------|
+| User Interface Design | 13 Material Design screens, gold/sage theme |
+| Navigation | `go_router` + 5-tab bottom navigation |
+| Event Handling | Buttons, forms, filters, `onTap`, `onChanged` |
+| Local Data Storage | Embedded data (`mock_data.dart`) + `SharedPreferences` |
+| Data Retrieval | Data loaded and displayed on each screen |
 | Networking | Firebase Auth + Firestore (cloud) |
-| API Consumption | REST via SDK Firebase |
-| Error Handling | Messages d'erreur login/register, validation formulaires |
+| API Consumption | REST via Firebase SDK |
+| Error Handling | Login/register error messages, form validation |
 
 ### 1.3 Technologies
 
-| Couche | Technologie |
-|--------|-------------|
+| Layer | Technology |
+|-------|------------|
 | Mobile | Flutter 3.x / Dart |
 | Navigation | go_router |
-| État | Riverpod |
-| Stockage local | SharedPreferences + données embarquées |
-| Base cloud | Firebase Auth + Cloud Firestore |
-| Prototype web | React + Vite (démonstration navigateur) |
-| Versionnement | Git / GitHub |
+| State | Riverpod |
+| Local storage | SharedPreferences + embedded data |
+| Cloud backend | Firebase Auth + Cloud Firestore |
+| Web prototype | React + Vite (browser demo) |
+| Version control | Git / GitHub |
 
 ---
 
-## 2. Couverture des fonctionnalités CAT
+## 2. CAT requirements coverage
 
-### 2.1 User Interface Design (5 marks)
+### 2.1 User Interface Design
 
-**Implémentation :**
-- Splash screen animé (`lib/features/splash/splash_screen.dart`)
-- Thème cohérent : couleurs or (#B8956A), sauge (#8FB5B0), polices Playfair Display + DM Sans
-- Composants réutilisables : `WeddingCard`, `PrimaryButton`, `WeddingInputField`
-- 13 écrans responsive avec `CustomScrollView`, graphiques (`fl_chart`)
+**Implementation:**
+- Animated splash screen (`lib/features/splash/splash_screen.dart`)
+- Consistent theme: gold (#B8956A), sage (#8FB5B0), Playfair Display + DM Sans fonts
+- Reusable components: `WeddingCard`, `PrimaryButton`, `WeddingInputField`
+- 13 responsive screens with `CustomScrollView`, charts (`fl_chart`)
 
-**Fichiers clés :** `lib/core/theme/`, `lib/core/widgets/wedding_widgets.dart`
+**Key files:** `lib/core/theme/`, `lib/core/widgets/wedding_widgets.dart`
+
+**Instructor mark:** ____________ / 5  
+**Comments:** _______________________________________________
 
 ---
 
-### 2.2 Navigation (4 marks)
+### 2.2 Navigation
 
-**Implémentation :**
-- `GoRouter` avec routes nommées (`lib/router/app_router.dart`)
-- Navigation par onglets : Home, Budget, Guests, Gallery, More (`MainShell`)
-- Navigation empilée vers sous-pages : Schedule, Vendors, Profile, Settings
-- Redirection : Splash → Login → Dashboard
+**Implementation:**
+- `GoRouter` with named routes (`lib/router/app_router.dart`)
+- Tab navigation: Home, Budget, Guests, Gallery, More (`MainShell`)
+- Stack navigation to sub-pages: Schedule, Vendors, Profile, Settings
+- Flow: Splash → Login → Dashboard
 
-**Exemple de routes :**
+**Route examples:**
 ```
 /splash → /login → /register → /home
 /home, /budget, /guests, /gallery, /more
 /schedule, /vendors, /profile, /settings, /notifications
 ```
 
----
-
-### 2.3 Event Handling (inclus dans UI/Navigation)
-
-**Exemples d'événements gérés :**
-- Tap sur boutons Login / Register
-- Saisie texte dans `TextEditingController`
-- Filtres RSVP et côté mariée/marié (Guest List)
-- Expansion des événements dans Schedule (`setState`)
-- Toggle notifications dans Settings
-- Navigation `onTap` vers sous-écrans
-
-**Fichiers :** `login_screen.dart`, `register_screen.dart`, `guest_list_screen.dart`, `schedule_screen.dart`
+**Instructor mark:** ____________ / 4  
+**Comments:** _______________________________________________
 
 ---
 
-### 2.4 Local Data Storage (5 marks)
+### 2.3 Event Handling
 
-**Implémentation :**
+**Handled events:**
+- Tap on Login / Register buttons
+- Text input via `TextEditingController`
+- RSVP and bride/groom side filters (Guest List)
+- Event expansion in Schedule (`setState`)
+- Notification toggles in Settings
+- `onTap` navigation to sub-screens
 
-| Méthode | Rôle | Fichier |
-|---------|------|---------|
-| Données embarquées | Budget, invités, événements (mode démo) | `lib/core/data/mock_data.dart` |
-| SharedPreferences | Comptes utilisateurs et profils mariage (JSON) | `lib/services/local_wedding_store.dart` |
-| Session mémoire | Données du couple connecté | `lib/services/wedding_session.dart` |
+**Files:** `login_screen.dart`, `register_screen.dart`, `guest_list_screen.dart`, `schedule_screen.dart`
 
-**Structure stockage local (SharedPreferences) :**
+**Instructor mark:** ____________  
+**Comments:** _______________________________________________
+
+---
+
+### 2.4 Local Data Storage
+
+**Implementation:**
+
+| Method | Role | File |
+|--------|------|------|
+| Embedded data | Budget, guests, events (demo mode) | `lib/core/data/mock_data.dart` |
+| SharedPreferences | User accounts and wedding profiles (JSON) | `lib/services/local_wedding_store.dart` |
+| In-memory session | Active couple data | `lib/services/wedding_session.dart` |
+
+**Local storage structure (SharedPreferences):**
 ```
 nikah_local_users     → { userId: { email, password, name, weddingId } }
-nikah_local_weddings  → { weddingId: { profil JSON complet } }
+nikah_local_weddings  → { weddingId: { full profile JSON } }
 nikah_email_index     → { email: userId }
 ```
 
-**Différence temporaire vs permanent :** voir section 12.1
+**Temporary vs permanent storage:** see section 12.1
+
+**Instructor mark:** ____________ / 5  
+**Comments:** _______________________________________________
 
 ---
 
-### 2.5 Data Retrieval (4 marks)
+### 2.5 Data Retrieval
 
-**Implémentation :**
-- `MockData` expose getters lus par tous les écrans (budget, invités, events…)
-- `WeddingRepository.loadForUser()` récupère le profil depuis SharedPreferences ou Firestore
-- `WeddingSession` fournit les données actives après connexion
-- Filtres invités : recherche + RSVP + côté mariée/marié
+**Implementation:**
+- `MockData` exposes getters read by all screens (budget, guests, events, etc.)
+- `WeddingRepository.loadForUser()` loads profile from SharedPreferences or Firestore
+- `WeddingSession` provides active data after login
+- Guest filters: search + RSVP + bride/groom side
 
-**Flux :**
+**Flow:**
 ```
-Login → loadForUser(userId) → WeddingSession.activate(profile) → MockData lit la session → UI affiche
+Login → loadForUser(userId) → WeddingSession.activate(profile) → MockData reads session → UI displays
 ```
 
----
-
-### 2.6 Networking (5 marks)
-
-**Implémentation :**
-- **Firebase Authentication** : création compte, connexion email/mot de passe
-- **Cloud Firestore** : collections `users/`, `weddings/`, sous-collections `guests/`
-- SDK Firebase = client HTTP asynchrone vers API Google Cloud
-
-**Fichiers :** `lib/services/auth_service.dart`, `lib/services/firestore_service.dart`
-
-**Mode démo (sans réseau) :** l'app fonctionne hors ligne avec stockage local si Firebase n'est pas configuré.
+**Instructor mark:** ____________ / 4  
+**Comments:** _______________________________________________
 
 ---
 
-### 2.7 API Consumption (5 marks)
+### 2.6 Networking
 
-**API utilisée :** Firebase REST/SDK
+**Implementation:**
+- **Firebase Authentication:** account creation, email/password sign-in
+- **Cloud Firestore:** collections `users/`, `weddings/`, sub-collection `guests/`
+- Firebase SDK = async HTTP client to Google Cloud API
 
-| Opération | Type | Service |
+**Files:** `lib/services/auth_service.dart`, `lib/services/firestore_service.dart`
+
+**Demo mode (no network):** the app works offline with local storage when Firebase is not configured.
+
+**Instructor mark (Networking):** ____________  
+**Comments:** _______________________________________________
+
+---
+
+### 2.7 API Consumption
+
+**API used:** Firebase REST/SDK
+
+| Operation | Type | Service |
 |-----------|------|---------|
-| Inscription | POST (createUser) | Firebase Auth |
-| Connexion | POST (signIn) | Firebase Auth |
-| Créer mariage | POST (set document) | Firestore |
-| Lire profil | GET (get document) | Firestore |
-| Stream invités | GET (snapshots) | Firestore |
+| Registration | POST (createUser) | Firebase Auth |
+| Sign in | POST (signIn) | Firebase Auth |
+| Create wedding | POST (set document) | Firestore |
+| Read profile | GET (get document) | Firestore |
+| Guest stream | GET (snapshots) | Firestore |
 
-**Format données :** JSON (Firestore documents, sérialisation `WeddingProfile.toJson()`)
+**Data format:** JSON (Firestore documents, `WeddingProfile.toJson()` serialization)
 
----
-
-### 2.8 Error Handling (3 marks)
-
-**Implémentation :**
-
-| Situation | Gestion |
-|-----------|---------|
-| Champs vides login | Message : "Please enter email and password" |
-| Mot de passe < 8 caractères | Message à l'inscription |
-| Email déjà enregistré | "This email is already registered" |
-| Compte introuvable | "Account not found. Please register first" |
-| Mauvais mot de passe | "Incorrect password" |
-| Erreur Firebase | `FirebaseAuthException` → message affiché |
-| Firebase non configuré | Fallback mode démo automatique |
-
-**Fichier :** `lib/services/auth_service.dart` → classe `AuthResult`
+**Instructor mark (API / Networking total):** ____________ / 5  
+**Comments:** _______________________________________________
 
 ---
 
-## 3. Modules implémentés
+### 2.8 Error Handling
 
-Correspondance avec les modules suggérés du CAT :
+**Implementation:**
 
-| Module suggéré | Module Nikah Planner | Fichier |
-|----------------|---------------------|---------|
-| 1. Login Screen | Écran de connexion | `lib/features/auth/login_screen.dart` |
-| 2. Dashboard | Accueil (compte à rebours, tâches, stats) | `lib/features/home/home_screen.dart` |
-| 3. Student Registration | Inscription couple / utilisateur | `lib/features/auth/register_screen.dart` |
-| 4. Local Database | SharedPreferences + mock data | `local_wedding_store.dart`, `mock_data.dart` |
-| 5. API Integration | Firebase Auth + Firestore | `auth_service.dart`, `firestore_service.dart` |
-| 6. Reports Screen | Rapport budget (graphique + transactions) | `lib/features/budget/budget_screen.dart` |
+| Situation | Handling |
+|-----------|----------|
+| Empty login fields | Message: "Please enter email and password" |
+| Password < 8 characters | Message on registration |
+| Email already registered | "This email is already registered" |
+| Account not found | "Account not found. Please register first." |
+| Wrong password | "Incorrect password" |
+| Firebase error | `FirebaseAuthException` → displayed message |
+| Firebase not configured | Automatic fallback to demo mode |
 
-**Écrans supplémentaires :** Guests, Gallery, Schedule, Vendors, Profile, Invitations, Notifications, Settings.
+**File:** `lib/services/auth_service.dart` → `AuthResult` class
 
----
-
-## 4. Grille de notation (auto-évaluation)
-
-| Critère | Marks | Preuve dans le projet |
-|---------|-------|----------------------|
-| User Interface Design | /5 | 13 écrans, thème cohérent, composants réutilisables |
-| Navigation | /4 | GoRouter, 5 onglets, sous-pages |
-| Local Storage | /5 | SharedPreferences + mock_data |
-| Data Retrieval | /4 | MockData, WeddingRepository, filtres |
-| Networking/API | /5 | Firebase Auth + Firestore |
-| Error Handling | /3 | AuthResult, messages UI |
-| Code Quality | /2 | Structure features/, services/, lints Flutter |
-| Documentation | /2 | README, ce journal, SOUMISSION_PROF.md |
-| **Total** | **/30** | |
+**Instructor mark:** ____________ / 3  
+**Comments:** _______________________________________________
 
 ---
 
-## 5. Architecture technique
+## 3. Implemented modules
+
+Mapping to suggested CAT modules:
+
+| Suggested module | Nikah Planner module | File | Instructor mark |
+|------------------|----------------------|------|-----------------|
+| 1. Login Screen | Sign-in screen | `lib/features/auth/login_screen.dart` | |
+| 2. Dashboard | Home (countdown, tasks, stats) | `lib/features/home/home_screen.dart` | |
+| 3. Student Registration | Couple / user registration | `lib/features/auth/register_screen.dart` | |
+| 4. Local Database | SharedPreferences + mock data | `local_wedding_store.dart`, `mock_data.dart` | |
+| 5. API Integration | Firebase Auth + Firestore | `auth_service.dart`, `firestore_service.dart` | |
+| 6. Reports Screen | Budget report (chart + transactions) | `lib/features/budget/budget_screen.dart` | |
+
+**Additional screens:** Guests, Gallery, Schedule, Vendors, Profile, Invitations, Notifications, Settings.
+
+**Module comments:** _______________________________________________
+
+---
+
+## 4. Grading (instructor)
+
+*To be completed by the instructor.*
+
+| Criterion | Max | Evidence in project | Mark |
+|-----------|-----|---------------------|------|
+| User Interface Design | 5 | 13 screens, consistent theme, reusable widgets | |
+| Navigation | 4 | GoRouter, 5 tabs, sub-pages | |
+| Local Storage | 5 | SharedPreferences + mock_data | |
+| Data Retrieval | 4 | MockData, WeddingRepository, filters | |
+| Networking / API | 5 | Firebase Auth + Firestore | |
+| Error Handling | 3 | AuthResult, UI error messages | |
+| Code Quality | 2 | features/, services/ structure, Flutter lints | |
+| Documentation | 2 | README, this logbook, SOUMISSION_PROF.md | |
+| **Total** | **30** | | |
+
+**Instructor signature:** _________________________  
+**Date:** _________________________
+
+---
+
+## 5. Technical architecture
 
 ```
 ┌─────────────────────────────────────────┐
@@ -246,95 +277,97 @@ Correspondance avec les modules suggérés du CAT :
    └─────────────┘  └────────────┘
 ```
 
-**Pattern :** Repository pattern — `WeddingRepository` abstrait la source (local ou cloud).
+**Pattern:** Repository pattern — `WeddingRepository` abstracts the data source (local or cloud).
 
 ---
 
-## 6. Stockage local et récupération des données
+## 6. Local storage and data retrieval
 
-### 6.1 Données embarquées (mode démo professeur)
+### 6.1 Embedded data (instructor demo mode)
 
-Fichier `mock_data.dart` — données d'exemple Siti & Ahmad pour tester sans compte :
-- 8 catégories budget, 8 invités, 6 événements, 7 prestataires
+File `mock_data.dart` — sample data for Siti & Ahmad to test without an account:
+- 8 budget categories, 8 guests, 6 events, 7 vendors
 
-### 6.2 Stockage persistant (SharedPreferences)
+### 6.2 Persistent storage (SharedPreferences)
 
-Chaque utilisateur inscrit obtient son propre espace :
-- Inscription → `WeddingDataFactory.createNew()` → sauvegarde JSON
-- Connexion → `loadForUser()` → affichage données personnelles
+Each registered user gets a private workspace:
+- Registration → `WeddingDataFactory.createNew()` → JSON save
+- Login → `loadForUser()` → personal data displayed
 
-### 6.3 Récupération
+### 6.3 Retrieval example
 
 ```dart
-// Exemple simplifié
+// Simplified example
 final profile = await WeddingRepository.instance.loadForUser(userId);
 WeddingSession.activate(profile);
-// Les écrans lisent MockData qui pointe vers WeddingSession
+// Screens read MockData which points to WeddingSession
 ```
 
 ---
 
-## 7. Réseau et consommation d'API
+## 7. Networking and API consumption
 
-### 7.1 Architecture client-serveur
+### 7.1 Client-server architecture
 
 ```
-[App Flutter]  ←→  [Firebase Auth API]     (authentification)
-[App Flutter]  ←→  [Cloud Firestore API]   (données mariage)
+[Flutter App]  ←→  [Firebase Auth API]     (authentication)
+[Flutter App]  ←→  [Cloud Firestore API]   (wedding data)
 ```
 
-### 7.2 Collections Firestore
+### 7.2 Firestore collections
 
 ```
 users/{userId}          → email, name, role, weddingId
 weddings/{weddingId}    → brideName, groomName, weddingDate, budget...
-weddings/{id}/guests/   → liste invités
+weddings/{id}/guests/   → guest list
 ```
 
-### 7.3 Traitement asynchrone
+### 7.3 Asynchronous processing
 
-Toutes les opérations réseau utilisent `async/await` :
+All network operations use `async/await`:
 - `signIn()`, `register()`, `createWeddingProfile()`, `loadForUser()`
 
 ---
 
-## 8. Gestion des erreurs
+## 8. Error handling
 
 ```dart
-// Pattern AuthResult utilisé dans toute l'app
+// AuthResult pattern used across the app
 final result = await authService.signIn(email: email, password: password);
 if (result.isSuccess) {
   context.go('/home');
 } else {
-  setState(() => _error = result.error);  // Affichage à l'utilisateur
+  setState(() => _error = result.error);  // Display to user
 }
 ```
 
-**Principes :**
-- Validation côté client avant appel API
-- Capture `FirebaseAuthException` avec message lisible
-- Fallback gracieux si Firebase indisponible (mode démo)
+**Principles:**
+- Client-side validation before API calls
+- Catch `FirebaseAuthException` with readable messages
+- Graceful fallback when Firebase is unavailable (demo mode)
 
 ---
 
-## 9. Phases de développement (logbook)
+## 9. Development phases (logbook)
 
-| Semaine | Date | Activité | Statut |
-|---------|------|----------|--------|
-| 1 | [Date] | Analyse besoins, maquette UI React | ✅ |
-| 2 | [Date] | Création projet Flutter, thème, Splash | ✅ |
-| 3 | [Date] | Login, Register, navigation GoRouter | ✅ |
-| 4 | [Date] | Dashboard, Budget, Guests, Schedule | ✅ |
-| 5 | [Date] | Stockage local SharedPreferences | ✅ |
-| 5 | [Date] | Intégration Firebase (Auth + Firestore) | ✅ |
-| 6 | [Date] | Tests Android, build APK, publication GitHub | ✅ |
-| 6 | [Date] | Documentation et journal de bord | ✅ |
+| Week | Date | Activity | Status | Instructor mark |
+|------|------|----------|--------|-----------------|
+| 1 | [Date] | Requirements analysis, React UI mockup | Done | |
+| 2 | [Date] | Flutter project setup, theme, Splash | Done | |
+| 3 | [Date] | Login, Register, GoRouter navigation | Done | |
+| 4 | [Date] | Dashboard, Budget, Guests, Schedule | Done | |
+| 5 | [Date] | Local storage with SharedPreferences | Done | |
+| 5 | [Date] | Firebase integration (Auth + Firestore) | Done | |
+| 6 | [Date] | Android testing, APK build, GitHub publish | Done | |
+| 6 | [Date] | Documentation and logbook | Done | |
+
+**Logbook comments:** _______________________________________________
 
 ---
 
-## 10. Instructions de test et démonstration
+## 10. Testing and demonstration instructions
 
-### 10.1 Pour le professeur — Application mobile
+### 10.1 Mobile application (instructor)
 
 ```bash
 git clone https://github.com/moinaalia/nikah-planner.git
@@ -343,103 +376,103 @@ flutter pub get
 flutter run
 ```
 
-**Démonstration recommandée :**
+**Recommended demo flow:**
 1. Splash screen → Login
-2. Connexion mode démo (n'importe quel email + mot de passe)
-3. Dashboard : compte à rebours, tâches, stats budget
-4. Budget : graphique camembert + transactions (Reports)
-5. Invités : filtres RSVP
-6. Schedule : timeline des événements
+2. Demo sign-in (any email + password after registration, or demo data)
+3. Dashboard: countdown, tasks, budget stats
+4. Budget: pie chart + transactions (Reports)
+5. Guests: RSVP filters
+6. Schedule: event timeline
 7. Settings → Sign Out
 
-### 10.2 Prototype web (navigateur)
+### 10.2 Web prototype (browser)
 
 ```bash
 cd nikah-planner
 npm install
 npm run dev
-# Ouvrir http://localhost:5173
+# Open http://localhost:5173
 ```
 
-### 10.3 Avec compte personnel (inscription)
+### 10.3 Personal account (registration)
 
-1. Register → remplir formulaire → Create Account
-2. Chaque email = espace privé séparé
-3. Sign Out → créer 2e compte → montrer données différentes
+1. Register → fill form → Create Account
+2. Each email = separate private workspace
+3. Sign Out → create a second account → show different data
 
 ---
 
-## 11. Captures d'écran requises
+## 11. Required screenshots
 
-À joindre au rapport (PDF ou dossier `screenshots/`) :
+Included in the `screenshots/` folder:
 
-| # | Écran | Fichier suggéré |
-|---|-------|-----------------|
+| # | Screen | File |
+|---|--------|------|
 | 1 | Splash | `01_splash.png` |
 | 2 | Login | `02_login.png` |
 | 3 | Register | `03_register.png` |
 | 4 | Dashboard (Home) | `04_dashboard.png` |
 | 5 | Budget / Reports | `05_budget.png` |
-| 6 | Guest List + filtres | `06_guests.png` |
+| 6 | Guest List + filters | `06_guests.png` |
 | 7 | Schedule | `07_schedule.png` |
-| 8 | Settings + profil | `08_settings.png` |
-| 9 | Message d'erreur login | `09_error.png` |
+| 8 | Settings + profile | `08_settings.png` |
+| 9 | Login error message | `09_error.png` |
 
-**Comment capturer :** émulateur Android → bouton caméra, ou `flutter run` sur téléphone → screenshot.
+**How to capture:** Android emulator camera button, or `flutter run` on a phone → screenshot.
 
 ---
 
-## 12. Questions de révision
+## 12. Revision questions
 
-### 12.1 Différencier stockage temporaire et permanent
+### 12.1 Temporary vs permanent storage
 
-| Temporaire | Permanent |
-|------------|-----------|
-| RAM / session mémoire (`WeddingSession`) | SharedPreferences sur disque |
-| Perdu à la fermeture de l'app | Persiste après redémarrage |
-| Variables `setState` | Fichier JSON dans SharedPreferences |
-| Exemple : filtre invité actif | Exemple : compte utilisateur sauvegardé |
+| Temporary | Permanent |
+|-----------|-----------|
+| RAM / in-memory session (`WeddingSession`) | SharedPreferences on disk |
+| Lost when app closes | Persists after restart |
+| `setState` variables | JSON file in SharedPreferences |
+| Example: active guest filter | Example: saved user account |
 
-### 12.2 Expliquer SQLite
+### 12.2 Explain SQLite
 
-SQLite est une base de données relationnelle légère embarquée dans l'appareil mobile. Elle stocke des données dans des tables avec SQL (SELECT, INSERT, UPDATE). Alternative à SharedPreferences pour des données structurées complexes. *Nikah Planner utilise SharedPreferences (format clé-valeur JSON) ; SQLite peut être ajouté pour les invités à grande échelle.*
+SQLite is a lightweight relational database embedded on the mobile device. It stores data in tables using SQL (SELECT, INSERT, UPDATE). It is an alternative to SharedPreferences for complex structured data. *Nikah Planner uses SharedPreferences (key-value JSON); SQLite could be added for large guest lists.*
 
-### 12.3 Définir API
+### 12.3 Define API
 
-Une **API** (Application Programming Interface) est une interface permettant à deux programmes de communiquer. En mobile, l'app (client) envoie des requêtes HTTP à un serveur (ex. Firebase) et reçoit des réponses JSON.
+An **API** (Application Programming Interface) is an interface that allows two programs to communicate. On mobile, the app (client) sends HTTP requests to a server (e.g. Firebase) and receives JSON responses.
 
-### 12.4 Expliquer le traitement asynchrone
+### 12.4 Explain asynchronous processing
 
-Le traitement **asynchrone** permet à l'app de continuer à fonctionner pendant une opération longue (réseau, disque). En Dart : `async/await` et `Future`. Exemple : `await authService.signIn()` n'bloque pas l'interface.
+**Asynchronous** processing lets the app keep running during long operations (network, disk). In Dart: `async/await` and `Future`. Example: `await authService.signIn()` does not freeze the UI.
 
-### 12.5 Comparer GET et POST
+### 12.5 Compare GET and POST
 
 | GET | POST |
 |-----|------|
-| Récupérer des données | Envoyer / créer des données |
-| Paramètres dans l'URL | Données dans le corps |
-| Exemple : lire profil Firestore | Exemple : créer compte Firebase Auth |
-| Idempotent | Peut modifier le serveur |
+| Retrieve data | Send / create data |
+| Parameters in URL | Data in request body |
+| Example: read Firestore profile | Example: create Firebase Auth account |
+| Idempotent | May modify the server |
 
-### 12.6 Architecture client-serveur
+### 12.6 Client-server architecture
 
-Le **client** (app mobile Flutter) envoie des requêtes au **serveur** (Firebase Cloud). Le serveur traite, accède à la base de données et renvoie une réponse. L'app n'accède jamais directement à la base serveur sans passer par l'API.
+The **client** (Flutter mobile app) sends requests to the **server** (Firebase Cloud). The server processes them, accesses the database, and returns a response. The app never accesses the server database directly without going through the API.
 
-### 12.7 Expliquer JSON
+### 12.7 Explain JSON
 
-**JSON** (JavaScript Object Notation) est un format texte pour échanger des données structurées : `{ "brideName": "Siti", "budget": 15000 }`. Utilisé par Firestore et SharedPreferences dans Nikah Planner.
+**JSON** (JavaScript Object Notation) is a text format for structured data: `{ "brideName": "Siti", "budget": 15000 }`. Used by Firestore and SharedPreferences in Nikah Planner.
 
-### 12.8 Concevoir une app intégrant stockage et réseau
+### 12.8 Design an app with storage and networking
 
-Nikah Planner illustre ce design :
-1. **Inscription** → POST Firebase Auth + sauvegarde locale
-2. **Lecture** → GET Firestore ou SharedPreferences
-3. **Affichage** → UI Flutter lit `MockData` / `WeddingSession`
-4. **Hors ligne** → fallback stockage local si pas de réseau
+Nikah Planner illustrates this design:
+1. **Registration** → POST Firebase Auth + local save
+2. **Read** → GET Firestore or SharedPreferences
+3. **Display** → Flutter UI reads `MockData` / `WeddingSession`
+4. **Offline** → local storage fallback when no network
 
 ---
 
-## 13. Références
+## 13. References
 
 1. Android Developer Documentation — https://developer.android.com  
 2. Flutter Documentation — https://docs.flutter.dev  
@@ -447,38 +480,41 @@ Nikah Planner illustre ce design :
 4. SQLite Documentation — https://www.sqlite.org/docs.html  
 5. REST API Design — https://restfulapi.net  
 6. SharedPreferences (Flutter) — package `shared_preferences`  
-7. Dépôt projet — https://github.com/moinaalia/nikah-planner  
+7. Project repository — https://github.com/moinaalia/nikah-planner  
 
 ---
 
-## 14. Annexes
+## 14. Appendices
 
-### A. Liens de soumission
+### A. Submission links
 
-| Élément | Lien |
-|---------|------|
-| Code source | https://github.com/moinaalia/nikah-planner |
-| Profil GitHub | https://github.com/moinaalia |
+| Item | Link |
+|------|------|
+| Source code | https://github.com/moinaalia/nikah-planner |
+| GitHub profile | https://github.com/moinaalia |
 | README | https://github.com/moinaalia/nikah-planner#readme |
+| Logbook PDF | https://github.com/moinaalia/nikah-planner/raw/main/JOURNAL_DE_BORD.pdf |
 
-### B. Checklist soumission CAT
+### B. CAT submission checklist
 
-- [ ] Code source sur GitHub
-- [x] Captures d'écran (section 11)
-- [ ] Ce rapport technique (PDF)
-- [ ] Démonstration live (émulateur ou téléphone)
+- [x] Source code on GitHub
+- [x] Screenshots (section 11)
+- [x] Technical report (PDF)
+- [ ] Live demonstration (emulator or phone)
 
-### C. Structure du dépôt
+### C. Repository structure
 
 ```
 nikah-planner/
-├── nikah_planner/     ← App Flutter (CAT principal)
-├── src/               ← Prototype React
+├── nikah_planner/     ← Flutter app (main CAT deliverable)
+├── screenshots/       ← UI screenshots
+├── src/               ← React prototype
 ├── README.md
 ├── SOUMISSION_PROF.md
-└── JOURNAL_DE_BORD.md ← Ce document
+├── JOURNAL_DE_BORD.md ← This document
+└── JOURNAL_DE_BORD.pdf
 ```
 
 ---
 
-*Rapport rédigé conformément aux instructions CAT — Mobile Application Development.*
+*Report prepared in accordance with CAT instructions — Mobile Application Development.*
