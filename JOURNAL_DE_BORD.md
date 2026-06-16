@@ -2,8 +2,8 @@
 
 **Module :** Développement d'applications mobiles  
 **Projet :** Nikah Planner — Application de planification de mariage  
-**Étudiant :** [Votre nom complet]  
-**ID étudiant :** [Votre numéro]  
+**Étudiant :** Hadidja Aliani  
+**ID étudiant :** BIT/2023/62116  
 **Compte GitHub :** [moinaalia](https://github.com/moinaalia)  
 **Dépôt source :** https://github.com/moinaalia/nikah-planner  
 **Date de soumission :** Juin 2026  

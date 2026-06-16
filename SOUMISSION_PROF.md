@@ -4,6 +4,8 @@
 
 | | |
 |---|---|
+| **Étudiant** | Hadidja Aliani |
+| **ID étudiant** | BIT/2023/62116 |
 | **Nom du projet** | Nikah Planner — Application mobile de planification de mariage |
 | **Compte GitHub** | [moinaalia](https://github.com/moinaalia) |
 | **Lien du dépôt** | https://github.com/moinaalia/nikah-planner |
@@ -41,7 +43,7 @@ Pour tester l'application mobile :
 (Mode démo : connexion avec n'importe quel email/mot de passe)
 
 Cordialement,
-[Votre nom]
+Hadidja Aliani — BIT/2023/62116
 ```
 
 ## Contenu du dépôt (vérification)
