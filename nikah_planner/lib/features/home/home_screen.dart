@@ -88,7 +88,8 @@ class HomeScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text('days to go', style: dmSans(context, size: 13, color: Colors.white)),
-                                Text('15 March 2025', style: dmSans(context, size: 11, color: Colors.white70)),
+                                Text(MockData.weddingDateLabel, style: dmSans(context, size: 11, color: Colors.white70)),
+                                Text(MockData.traditionLabel, style: dmSans(context, size: 10, color: Colors.white60)),
                               ],
                             ),
                           ),

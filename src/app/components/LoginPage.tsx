@@ -11,6 +11,16 @@ export function LoginPage({ onLogin, onGoRegister }: LoginPageProps) {
   const [showPass, setShowPass] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
+
+  const handleLogin = () => {
+    if (!email.trim() || !password.trim()) {
+      setError("Please enter email and password");
+      return;
+    }
+    setError(null);
+    onLogin();
+  };
 
   return (
     <div className="h-full w-full overflow-y-auto" style={{ background: "linear-gradient(180deg, #E8D5BE 0%, #FBF8F4 40%)" }}>
@@ -46,6 +56,14 @@ export function LoginPage({ onLogin, onGoRegister }: LoginPageProps) {
         className="mx-4 rounded-3xl p-6 shadow-lg"
         style={{ background: "#FFFFFF" }}
       >
+        {error && (
+          <div
+            className="mb-4 px-3 py-3 rounded-xl"
+            style={{ background: "#FDECEC", color: "#C0392B", fontFamily: "'DM Sans', sans-serif", fontSize: "0.85rem" }}
+          >
+            {error}
+          </div>
+        )}
         {/* Email */}
         <div className="mb-4">
           <label style={{ fontFamily: "'DM Sans', sans-serif", color: "#7A5C3A", fontSize: "0.85rem", display: "block", marginBottom: "6px" }}>
@@ -92,7 +110,7 @@ export function LoginPage({ onLogin, onGoRegister }: LoginPageProps) {
 
         {/* Login button */}
         <button
-          onClick={onLogin}
+          onClick={handleLogin}
           className="w-full py-3.5 rounded-2xl shadow-md transition-transform active:scale-95"
           style={{ background: "linear-gradient(135deg, #C9A96E, #B8956A)", fontFamily: "'DM Sans', sans-serif", color: "white", letterSpacing: "0.05em" }}
         >

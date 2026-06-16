@@ -31,6 +31,7 @@ Le dépôt contient :
 - Application mobile Flutter (Android) — 13 écrans, Firebase-ready
 - Prototype UI React (référence design)
 - README avec instructions d'installation et d'exécution
+- Journal de bord / rapport technique CAT (JOURNAL_DE_BORD.md)
 
 Pour tester l'application mobile :
 1. Cloner le dépôt

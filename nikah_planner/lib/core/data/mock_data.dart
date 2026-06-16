@@ -1,166 +1,91 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
+import 'wedding_models.dart';
+import 'wedding_personal.dart';
+import '../../services/wedding_session.dart';
 
-class BudgetCategory {
-  const BudgetCategory({
-    required this.name,
-    required this.budget,
-    required this.spent,
-    required this.color,
-    required this.icon,
-  });
+export 'wedding_models.dart';
 
-  final String name;
-  final int budget;
-  final int spent;
-  final Color color;
-  final String icon;
-}
-
-class BudgetTransaction {
-  const BudgetTransaction({
-    required this.title,
-    required this.amount,
-    required this.date,
-    required this.category,
-  });
-
-  final String title;
-  final int amount;
-  final String date;
-  final String category;
-}
-
-class GuestItem {
-  const GuestItem({
-    required this.id,
-    required this.name,
-    required this.relation,
-    required this.side,
-    required this.rsvp,
-    required this.table,
-    required this.phone,
-    required this.plusOne,
-  });
-
-  final int id;
-  final String name;
-  final String relation;
-  final String side;
-  final String rsvp;
-  final int table;
-  final String phone;
-  final bool plusOne;
-}
-
-class WeddingEvent {
-  const WeddingEvent({
-    required this.id,
-    required this.title,
-    this.arabicTitle,
-    required this.date,
-    required this.time,
-    required this.endTime,
-    required this.location,
-    required this.description,
-    required this.color,
-    required this.category,
-    required this.tasks,
-  });
-
-  final int id;
-  final String title;
-  final String? arabicTitle;
-  final String date;
-  final String time;
-  final String endTime;
-  final String location;
-  final String description;
-  final Color color;
-  final String category;
-  final List<String> tasks;
-}
-
-class GalleryItem {
-  const GalleryItem({
-    required this.id,
-    required this.title,
-    required this.category,
-    required this.liked,
-    required this.imageUrl,
-    required this.color,
-  });
-
-  final int id;
-  final String title;
-  final String category;
-  final bool liked;
-  final String imageUrl;
-  final Color color;
-}
-
-class VendorItem {
-  const VendorItem({
-    required this.id,
-    required this.name,
-    required this.category,
-    required this.rating,
-    required this.reviews,
-    required this.price,
-    required this.location,
-    required this.booked,
-    required this.tags,
-    required this.emoji,
-  });
-
-  final int id;
-  final String name;
-  final String category;
-  final double rating;
-  final int reviews;
-  final String price;
-  final String location;
-  final bool booked;
-  final List<String> tags;
-  final String emoji;
-}
-
-class AppNotification {
-  const AppNotification({
-    required this.id,
-    required this.type,
-    required this.title,
-    required this.body,
-    required this.time,
-    required this.read,
-  });
-
-  final int id;
-  final String type;
-  final String title;
-  final String body;
-  final String time;
-  final bool read;
-}
-
-class WeddingTask {
-  const WeddingTask({
-    required this.title,
-    required this.due,
-    required this.done,
-    required this.priority,
-  });
-
-  final String title;
-  final String due;
-  final bool done;
-  final String priority;
-}
-
+/// Priorite : compte connecte > mode perso > demo (prof / GitHub).
 class MockData {
+  static const _personalMode = bool.fromEnvironment('PERSONAL_WEDDING', defaultValue: false);
+  static bool get _useSession => WeddingSession.isActive;
+  static bool get _usePersonal => !_useSession && _personalMode && WeddingPersonal.enabled;
+
+  static String get brideName =>
+      _useSession ? WeddingSession.profile.brideName : (_usePersonal ? WeddingPersonal.brideName : _Demo.brideName);
+  static String get groomName =>
+      _useSession ? WeddingSession.profile.groomName : (_usePersonal ? WeddingPersonal.groomName : _Demo.groomName);
+  static String get coupleShort =>
+      _useSession ? WeddingSession.profile.coupleShort : (_usePersonal ? WeddingPersonal.coupleShort : _Demo.coupleShort);
+  static String get venue =>
+      _useSession ? WeddingSession.profile.venue : (_usePersonal ? WeddingPersonal.venue : _Demo.venue);
+  static String get theme =>
+      _useSession ? WeddingSession.profile.theme : (_usePersonal ? WeddingPersonal.theme : _Demo.theme);
+  static String get guestLimit =>
+      _useSession ? WeddingSession.profile.guestLimit : (_usePersonal ? WeddingPersonal.guestLimit : _Demo.guestLimit);
+  static String get weddingDateLabel =>
+      _useSession ? WeddingSession.profile.weddingDateLabel : (_usePersonal ? WeddingPersonal.weddingDateLabel : _Demo.weddingDateLabel);
+  static String get weddingDateShort =>
+      _useSession ? WeddingSession.profile.weddingDateShort : (_usePersonal ? WeddingPersonal.weddingDateShort : _Demo.weddingDateShort);
+  static DateTime get weddingDate =>
+      _useSession ? WeddingSession.profile.weddingDate : (_usePersonal ? WeddingPersonal.weddingDate : _Demo.weddingDate);
+  static String? get ownerEmail => _useSession ? WeddingSession.profile.ownerEmail : null;
+  static String? get ownerName => _useSession ? WeddingSession.profile.ownerName : null;
+  static String get countryName =>
+      _useSession ? WeddingSession.profile.countryName : (_usePersonal ? 'Comores' : 'Malaisie');
+  static String get weddingTypeName =>
+      _useSession ? WeddingSession.profile.weddingTypeName : (_usePersonal ? 'Grande mariage' : 'Akad + Walimah');
+  static String get traditionLabel =>
+      _useSession ? WeddingSession.profile.traditionLabel : '$countryName — $weddingTypeName';
+
+  static List<BudgetCategory> get budgetCategories => _useSession
+      ? WeddingSession.profile.budgetCategories
+      : (_usePersonal ? WeddingPersonal.budgetCategories : _Demo.budgetCategories);
+  static List<BudgetTransaction> get transactions => _useSession
+      ? WeddingSession.profile.transactions
+      : (_usePersonal ? WeddingPersonal.transactions : _Demo.transactions);
+  static List<GuestItem> get guests =>
+      _useSession ? WeddingSession.profile.guests : (_usePersonal ? WeddingPersonal.guests : _Demo.guests);
+  static List<WeddingEvent> get events =>
+      _useSession ? WeddingSession.profile.events : (_usePersonal ? WeddingPersonal.events : _Demo.events);
+  static List<GalleryItem> get galleryItems => _useSession
+      ? WeddingSession.profile.galleryItems
+      : (_usePersonal ? WeddingPersonal.galleryItems : _Demo.galleryItems);
+  static List<String> get galleryCategories => _useSession
+      ? const ['All', 'Venue', 'Decoration', 'Florals', 'Attire', 'Pelamin']
+      : (_usePersonal ? WeddingPersonal.galleryCategories : _Demo.galleryCategories);
+  static List<VendorItem> get vendors =>
+      _useSession ? WeddingSession.profile.vendors : (_usePersonal ? WeddingPersonal.vendors : _Demo.vendors);
+  static List<String> get vendorCategories => _useSession
+      ? const ['All', 'Venue', 'Catering', 'Photography', 'Makeup', 'Decoration', 'Attire']
+      : (_usePersonal ? WeddingPersonal.vendorCategories : _Demo.vendorCategories);
+  static List<AppNotification> get notifications => _useSession
+      ? WeddingSession.profile.notifications
+      : (_usePersonal ? WeddingPersonal.notifications : _Demo.notifications);
+  static List<WeddingTask> get tasks =>
+      _useSession ? WeddingSession.profile.tasks : (_usePersonal ? WeddingPersonal.tasks : _Demo.tasks);
+  static List<Map<String, String>> get upcomingEvents => _useSession
+      ? WeddingSession.profile.upcomingEvents
+      : (_usePersonal ? WeddingPersonal.upcomingEvents : _Demo.upcomingEvents);
+
+  static int get totalBudget => budgetCategories.fold(0, (sum, c) => sum + c.budget);
+  static int get totalSpent => budgetCategories.fold(0, (sum, c) => sum + c.spent);
+  static int get daysUntilWedding {
+    final now = DateTime.now();
+    return weddingDate.difference(DateTime(now.year, now.month, now.day)).inDays.clamp(0, 9999);
+  }
+}
+
+class _Demo {
   static const brideName = 'Siti Nurhaliza';
   static const groomName = 'Ahmad Fauzi';
   static const coupleShort = 'Siti & Ahmad';
+  static const venue = 'Dewan Mulia, Shah Alam';
+  static const theme = 'Elegant Gold & Sage Green';
+  static const guestLimit = '350 pax';
+  static const weddingDateLabel = '15 March 2025';
+  static const weddingDateShort = '15 Mar 2025';
   static final weddingDate = DateTime(2025, 3, 15);
 
   static const budgetCategories = [
@@ -319,11 +244,4 @@ class MockData {
     {'title': 'Majlis Walimah', 'date': '15 Mar', 'time': '11:00 AM', 'location': 'Dewan Mulia, Shah Alam'},
     {'title': 'Bersanding Ceremony', 'date': '16 Mar', 'time': '2:00 PM', 'location': 'Dewan Mulia, Shah Alam'},
   ];
-
-  static int get totalBudget => budgetCategories.fold(0, (sum, c) => sum + c.budget);
-  static int get totalSpent => budgetCategories.fold(0, (sum, c) => sum + c.spent);
-  static int get daysUntilWedding {
-    final now = DateTime.now();
-    return weddingDate.difference(DateTime(now.year, now.month, now.day)).inDays.clamp(0, 9999);
-  }
 }

@@ -23,7 +23,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         SliverToBoxAdapter(
           child: PageHeader(
             title: 'Wedding Schedule',
-            subtitle: 'March 14–16, 2025',
+            subtitle: MockData.traditionLabel,
             gradient: const LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,

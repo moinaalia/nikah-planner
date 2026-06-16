@@ -58,7 +58,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       height: 56,
                       decoration: BoxDecoration(gradient: AppColors.goldGradient, borderRadius: BorderRadius.circular(16)),
                       alignment: Alignment.center,
-                      child: Text('SA', style: playfair(context, size: 18, color: Colors.white)),
+                      child: Text(
+                        MockData.coupleShort.isNotEmpty
+                            ? MockData.coupleShort.split(' ').map((w) => w.isNotEmpty ? w[0] : '').take(2).join()
+                            : 'NP',
+                        style: playfair(context, size: 18, color: Colors.white),
+                      ),
                     ),
                     const SizedBox(width: 16),
                     Expanded(
@@ -66,8 +71,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(MockData.coupleShort, style: playfair(context, size: 16)),
-                          Text('siti.nurhaliza@gmail.com', style: dmSans(context, size: 12, color: AppColors.textMuted)),
-                          Text('Wedding: 15 March 2025', style: dmSans(context, size: 11, color: AppColors.primary)),
+                          Text(
+                            MockData.ownerEmail ?? widget.authService.currentEmail ?? 'Compte connecte',
+                            style: dmSans(context, size: 12, color: AppColors.textMuted),
+                          ),
+                          Text('Wedding: ${MockData.weddingDateLabel}', style: dmSans(context, size: 11, color: AppColors.primary)),
+                          Text(MockData.traditionLabel, style: dmSans(context, size: 10, color: AppColors.textMuted)),
                         ],
                       ),
                     ),
@@ -100,9 +109,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 title: 'Wedding Details',
                 icon: Icons.calendar_today,
                 children: [
-                  _NavRow(icon: Icons.event, label: 'Wedding Date', value: '15 Mar 2025'),
-                  _NavRow(icon: Icons.people_outline, label: 'Guest Limit', value: '350 pax'),
-                  _NavRow(icon: Icons.color_lens_outlined, label: 'Wedding Theme', value: 'Sage & Gold'),
+                  _NavRow(icon: Icons.event, label: 'Wedding Date', value: MockData.weddingDateShort),
+                  _NavRow(icon: Icons.people_outline, label: 'Guest Limit', value: MockData.guestLimit),
+                  _NavRow(icon: Icons.color_lens_outlined, label: 'Wedding Theme', value: MockData.theme),
                 ],
               ),
               const SizedBox(height: 16),

@@ -54,3 +54,5 @@ Student / educational project.
 ## For reviewers / professors
 
 See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for project summary, verification checklist, and email template.
+
+See [JOURNAL_DE_BORD.md](JOURNAL_DE_BORD.md) for the **CAT technical report / logbook** (UI, navigation, storage, API, error handling, revision questions).

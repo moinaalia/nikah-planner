@@ -39,3 +39,7 @@ Thumbs.db
 **/google-services.json
 **/GoogleService-Info.plist
 **/firebase_options.dart.bak
+
+# Usage personnel (mariage 14 aout) — ne pas envoyer sur GitHub
+nikah_planner/lib/core/data/wedding_personal.dart
+nikah_planner/UTILISATION_PERSONNELLE.md
