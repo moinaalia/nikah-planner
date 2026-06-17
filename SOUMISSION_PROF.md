@@ -32,8 +32,10 @@ Dépôt du projet : https://github.com/moinaalia/nikah-planner
 Le dépôt contient :
 - Application mobile Flutter (Android) — 13 écrans, Firebase-ready
 - Prototype UI React (référence design)
+- Captures d'écran (dossier screenshots/)
 - README avec instructions d'installation et d'exécution
-- Journal de bord / rapport technique CAT (JOURNAL_DE_BORD.md)
+
+(Rapport technique / logbook CAT : à envoyer séparément au professeur en PDF.)
 
 Pour tester l'application mobile :
 1. Cloner le dépôt

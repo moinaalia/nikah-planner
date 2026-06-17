@@ -43,3 +43,8 @@ Thumbs.db
 # Usage personnel (mariage 14 aout) — ne pas envoyer sur GitHub
 nikah_planner/lib/core/data/wedding_personal.dart
 nikah_planner/UTILISATION_PERSONNELLE.md
+
+# Logbook / rapport CAT — soumission separee au professeur (pas sur GitHub public)
+JOURNAL_DE_BORD.md
+JOURNAL_DE_BORD.pdf
+JOURNAL_DE_BORD.html
