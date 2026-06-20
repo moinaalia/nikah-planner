@@ -76,13 +76,13 @@ Build a complete mobile application covering concepts from weeks 1 to 5:
 
 **Key files:** `lib/core/theme/`, `lib/core/widgets/wedding_widgets.dart`
 
-**Screenshots (UI design):**
+**Screenshots:**
 
-<p align="center"><img src="logbook/images/01_splash.png" alt="Splash screen" width="180"/>
-<img src="logbook/images/02_login.png" alt="Login screen" width="180"/>
-<img src="logbook/images/03_register.png" alt="Register screen" width="180"/>
-<img src="logbook/images/04_dashboard.png" alt="Dashboard home screen" width="180"/>
-<img src="logbook/images/05_budget.png" alt="Budget and reports screen" width="180"/></p>
+<p align="center"><img src="logbook/images/01_splash.png" alt="Splash screen" width="160"/>
+<img src="logbook/images/02_login.png" alt="Login screen" width="160"/>
+<img src="logbook/images/03_register.png" alt="Register screen" width="160"/>
+<img src="logbook/images/04_dashboard.png" alt="Dashboard home screen" width="160"/>
+<img src="logbook/images/05_budget.png" alt="Budget and reports screen" width="160"/></p>
 
 **Instructor mark:** ____________ / 5  
 **Comments:** _______________________________________________
@@ -104,14 +104,9 @@ Build a complete mobile application covering concepts from weeks 1 to 5:
 /schedule, /vendors, /profile, /settings, /notifications
 ```
 
-**Screenshot (navigation / dashboard):**
+**Screenshot:**
 
-<p align="center">
-<img src="logbook/images/04_dashboard.png" alt="Dashboard navigation" width="300"/>
-</p>
-
-![Dashboard navigation](logbook/images/04_dashboard.png)
-
+<p align="center"><img src="logbook/images/04_dashboard.png" alt="Dashboard navigation" width="300"/></p>
 
 **Instructor mark:** ____________ / 4  
 **Comments:** _______________________________________________
@@ -130,11 +125,11 @@ Build a complete mobile application covering concepts from weeks 1 to 5:
 
 **Files:** `login_screen.dart`, `register_screen.dart`, `guest_list_screen.dart`, `schedule_screen.dart`
 
-**Screenshots (event handling):**
+**Screenshots:**
 
-<p align="center"><img src="logbook/images/06_guests.png" alt="06_guests.png" width="220"/>
-<img src="logbook/images/07_schedule.png" alt="07_schedule.png" width="220"/>
-<img src="logbook/images/08_settings.png" alt="08_settings.png" width="220"/></p>
+<p align="center"><img src="logbook/images/06_guests.png" alt="Guest list with filters" width="200"/>
+<img src="logbook/images/07_schedule.png" alt="Wedding schedule screen" width="200"/>
+<img src="logbook/images/08_settings.png" alt="Settings and profile screen" width="200"/></p>
 
 **Instructor mark:** ____________  
 **Comments:** _______________________________________________
@@ -234,14 +229,9 @@ Login → loadForUser(userId) → WeddingSession.activate(profile) → MockData 
 
 **File:** `lib/services/auth_service.dart` → `AuthResult` class
 
-**Screenshot (error handling):**
+**Screenshot:**
 
-<p align="center">
-<img src="logbook/images/09_error.png" alt="Login error message" width="280"/>
-</p>
-
-![Login error message](logbook/images/09_error.png)
-
+<p align="center"><img src="logbook/images/09_error.png" alt="Login error message" width="280"/></p>
 
 **Instructor mark:** ____________ / 3  
 **Comments:** _______________________________________________
@@ -436,98 +426,45 @@ npm run dev
 
 ## 11. Required screenshots
 
-All screenshots are included **directly in this logbook** (images below).
-They are stored in [`logbook/images/`](logbook/images/) and rendered inline here.
+Screenshots required by the CAT instructions:
 
 ### 11.1 Splash screen
 
-<p align="center">
-<img src="logbook/images/01_splash.png" alt="Splash screen" width="280"/>
-</p>
-
-![Splash screen](logbook/images/01_splash.png)
+<p align="center"><img src="logbook/images/01_splash.png" alt="Splash screen" width="280"/></p>
 
 ### 11.2 Login screen
 
-<p align="center">
-<img src="logbook/images/02_login.png" alt="Login screen" width="280"/>
-</p>
-
-![Login screen](logbook/images/02_login.png)
+<p align="center"><img src="logbook/images/02_login.png" alt="Login screen" width="280"/></p>
 
 ### 11.3 Register screen
 
-<p align="center">
-<img src="logbook/images/03_register.png" alt="Register screen" width="280"/>
-</p>
-
-![Register screen](logbook/images/03_register.png)
+<p align="center"><img src="logbook/images/03_register.png" alt="Register screen" width="280"/></p>
 
 ### 11.4 Dashboard (Home)
 
-<p align="center">
-<img src="logbook/images/04_dashboard.png" alt="Dashboard home screen" width="280"/>
-</p>
-
-![Dashboard home screen](logbook/images/04_dashboard.png)
+<p align="center"><img src="logbook/images/04_dashboard.png" alt="Dashboard home screen" width="280"/></p>
 
 ### 11.5 Budget / Reports
 
-<p align="center">
-<img src="logbook/images/05_budget.png" alt="Budget and reports screen" width="280"/>
-</p>
-
-![Budget and reports screen](logbook/images/05_budget.png)
+<p align="center"><img src="logbook/images/05_budget.png" alt="Budget and reports screen" width="280"/></p>
 
 ### 11.6 Guest list and filters
 
-<p align="center">
-<img src="logbook/images/06_guests.png" alt="Guest list with filters" width="280"/>
-</p>
-
-![Guest list with filters](logbook/images/06_guests.png)
+<p align="center"><img src="logbook/images/06_guests.png" alt="Guest list with filters" width="280"/></p>
 
 ### 11.7 Schedule
 
-<p align="center">
-<img src="logbook/images/07_schedule.png" alt="Wedding schedule screen" width="280"/>
-</p>
-
-![Wedding schedule screen](logbook/images/07_schedule.png)
+<p align="center"><img src="logbook/images/07_schedule.png" alt="Wedding schedule screen" width="280"/></p>
 
 ### 11.8 Settings and profile
 
-<p align="center">
-<img src="logbook/images/08_settings.png" alt="Settings and profile screen" width="280"/>
-</p>
-
-![Settings and profile screen](logbook/images/08_settings.png)
+<p align="center"><img src="logbook/images/08_settings.png" alt="Settings and profile screen" width="280"/></p>
 
 ### 11.9 Login error message
 
-<p align="center">
-<img src="logbook/images/09_error.png" alt="Login error message" width="280"/>
-</p>
+<p align="center"><img src="logbook/images/09_error.png" alt="Login error message" width="280"/></p>
 
-![Login error message](logbook/images/09_error.png)
-
-**Screenshot summary:**
-
-| # | Screen | Preview |
-|---|--------|---------|
-| 1 | Splash screen | ![Splash screen](logbook/images/01_splash.png) |
-| 2 | Login screen | ![Login screen](logbook/images/02_login.png) |
-| 3 | Register screen | ![Register screen](logbook/images/03_register.png) |
-| 4 | Dashboard (Home) | ![Dashboard (Home)](logbook/images/04_dashboard.png) |
-| 5 | Budget / Reports | ![Budget / Reports](logbook/images/05_budget.png) |
-| 6 | Guest list and filters | ![Guest list and filters](logbook/images/06_guests.png) |
-| 7 | Schedule | ![Schedule](logbook/images/07_schedule.png) |
-| 8 | Settings and profile | ![Settings and profile](logbook/images/08_settings.png) |
-| 9 | Login error message | ![Login error message](logbook/images/09_error.png) |
-
-**How to capture:** Android emulator camera button, or `flutter run` on a phone, then screenshot.
-
----
+**How to capture:** Android emulator, or `flutter run` on a phone, then screenshot.
 
 ---
 
@@ -616,12 +553,12 @@ Nikah Planner illustrates this design:
 ```
 nikah-planner/
 ├── nikah_planner/     ← Flutter app (main CAT deliverable)
-├── logbook/images/    ← Screenshots shown in LOGBOOK.md
+├── LOGBOOK.md         ← Technical report (English)
 ├── src/               ← React prototype
 ├── README.md
 ├── LOGBOOK.md         ← CAT technical report (English, with screenshots)
 ├── SOUMISSION_PROF.md
-└── logbook/images/    ← Screenshot PNG files
+└── screenshots/       ← UI screenshots (embedded in LOGBOOK.md)
 ```
 
 ---
