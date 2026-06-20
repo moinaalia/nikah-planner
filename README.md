@@ -47,17 +47,6 @@ dart pub global activate flutterfire_cli
 flutterfire configure
 ```
 
-## Documentation (CAT logbook)
-
-**For the professor — complete report with all screenshots:**
-
-| Document | Link |
-|----------|------|
-| **[LOGBOOK.doc](LOGBOOK.doc)** | **Full Word report** — all text + 9 screenshots embedded (download and open in Word) |
-| [LOGBOOK.md](LOGBOOK.md) | Markdown preview on GitHub (same content, screenshots in sections 2.1–2.8 and 11) |
-
-See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for the email template.
-
 ## License
 
 Student / educational project.

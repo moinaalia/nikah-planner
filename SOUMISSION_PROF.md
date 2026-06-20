@@ -15,7 +15,8 @@
 
 **Status: published** — https://github.com/moinaalia/nikah-planner
 
-Source code, screenshots, and the full English logbook are on the `main` branch.
+The repository contains the **source code only** (Flutter app + React prototype).  
+The **CAT logbook** is submitted separately to the instructor (Word document, not on GitHub).
 
 ---
 
@@ -28,15 +29,13 @@ Here is my wedding planning project (Nikah Planner).
 
 GitHub profile: https://github.com/moinaalia
 Project repository: https://github.com/moinaalia/nikah-planner
-Complete logbook (Word — full text + all screenshots): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.doc
-Logbook preview (Markdown): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.md
 
 The repository contains:
 - Flutter mobile app (Android) — 13 screens, Firebase-ready
 - React UI prototype (design reference)
-- LOGBOOK.doc — **complete CAT report** (English, all screenshots embedded inside the document)
-- LOGBOOK.md — same report readable on GitHub
 - README with installation and run instructions
+
+I am attaching my CAT logbook (Word document) separately by email.
 
 To test the mobile app:
 1. Clone the repository
@@ -61,11 +60,6 @@ Hadidja Aliani — BIT/2023/62116
 ### Web prototype (`src/`)
 - Same React UI for browser demonstration
 - `npm install` then `npm run dev`
-
-### Documentation
-- [LOGBOOK.doc](LOGBOOK.doc) — complete CAT report (Word, screenshots embedded)
-- [LOGBOOK.md](LOGBOOK.md) — same report on GitHub (Markdown)
-- [logbook/images/](logbook/images/) — 9 UI screenshots
 
 ## Project criteria covered
 

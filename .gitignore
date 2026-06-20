@@ -44,9 +44,13 @@ Thumbs.db
 nikah_planner/lib/core/data/wedding_personal.dart
 nikah_planner/UTILISATION_PERSONNELLE.md
 
-# Logbook local exports (GitHub: LOGBOOK.md + LOGBOOK.doc)
-~$*.doc
+# Logbook — local only (not on GitHub; submit to professor separately)
+LOGBOOK.md
+LOGBOOK.doc
+LOGBOOK_A_REMPLIR.doc
 LOGBOOK_WORD.doc
+logbook/
+screenshots/
 JOURNAL_DE_BORD.md
 JOURNAL_DE_BORD.pdf
 JOURNAL_DE_BORD.html
