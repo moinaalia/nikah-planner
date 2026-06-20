@@ -29,7 +29,6 @@ Here is my wedding planning project (Nikah Planner).
 
 GitHub profile: https://github.com/moinaalia
 Project repository: https://github.com/moinaalia/nikah-planner
-CAT logbook (PDF): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.pdf
 
 The repository contains:
 - Flutter mobile app (Android) — 13 screens, Firebase-ready
