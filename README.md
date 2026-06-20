@@ -51,8 +51,9 @@ flutterfire configure
 
 | Document | Description |
 |----------|-------------|
-| [LOGBOOK.md](LOGBOOK.md) | Full CAT technical report (English) with embedded screenshots |
-| [screenshots/](screenshots/) | 9 UI screenshots (Splash, Login, Dashboard, etc.) |
+| [LOGBOOK.doc](LOGBOOK.doc) | **Complete CAT report (Word)** — English, all screenshots embedded |
+| [LOGBOOK.md](LOGBOOK.md) | Same report on GitHub (Markdown, screenshots in sections 2.1–2.8 and 11) |
+| [logbook/images/](logbook/images/) | Screenshot PNG files |
 | [SOUMISSION_PROF.md](SOUMISSION_PROF.md) | Submission guide and email template for instructors |
 
 ## License
