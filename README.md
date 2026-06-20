@@ -47,6 +47,14 @@ dart pub global activate flutterfire_cli
 flutterfire configure
 ```
 
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [LOGBOOK.md](LOGBOOK.md) | Full CAT technical report (English) with embedded screenshots |
+| [screenshots/](screenshots/) | 9 UI screenshots (Splash, Login, Dashboard, etc.) |
+| [SOUMISSION_PROF.md](SOUMISSION_PROF.md) | Submission guide and email template for instructors |
+
 ## License
 
 Student / educational project.

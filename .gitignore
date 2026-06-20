@@ -44,7 +44,10 @@ Thumbs.db
 nikah_planner/lib/core/data/wedding_personal.dart
 nikah_planner/UTILISATION_PERSONNELLE.md
 
-# Logbook / rapport CAT — soumission separee au professeur (pas sur GitHub public)
+# Logbook local exports (source of truth on GitHub: LOGBOOK.md)
 JOURNAL_DE_BORD.md
 JOURNAL_DE_BORD.pdf
 JOURNAL_DE_BORD.html
+JOURNAL_DE_BORD.doc
+JOURNAL_DE_BORD_COMPLET.doc
+JOURNAL_DE_BORD_A_REMPLIR.doc

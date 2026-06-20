@@ -61,7 +61,12 @@ class AuthService {
       final repo = WeddingRepository.instance;
       final userId = await repo.localUserIdForEmail(email);
       if (userId == null) {
-        return AuthResult.failure('Account not found. Please register first.');
+        // Professor / quick demo: any email + password opens sample data (Siti & Ahmad)
+        _localUserId = 'demo_visitor';
+        _localEmail = email.trim().toLowerCase();
+        _localName = 'Demo User';
+        WeddingSession.clear();
+        return AuthResult.success();
       }
 
       final valid = await repo.validateLocalLogin(email, password);

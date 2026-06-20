@@ -1,70 +1,74 @@
-# Soumission du projet — Nikah Planner
+# Project Submission — Nikah Planner
 
-## Informations étudiant
+## Student information
 
 | | |
 |---|---|
-| **Étudiant** | Hadidja Aliani |
-| **ID étudiant** | BIT/2023/62116 |
-| **Nom du projet** | Nikah Planner — Application mobile de planification de mariage |
-| **Compte GitHub** | [moinaalia](https://github.com/moinaalia) |
-| **Lien du dépôt** | https://github.com/moinaalia/nikah-planner |
-| **Profil public** | https://github.com/moinaalia |
+| **Student** | Hadidja Aliani |
+| **Student ID** | BIT/2023/62116 |
+| **Project name** | Nikah Planner — Wedding planning mobile app |
+| **GitHub account** | [moinaalia](https://github.com/moinaalia) |
+| **Repository** | https://github.com/moinaalia/nikah-planner |
+| **Public profile** | https://github.com/moinaalia |
 
-## Publication sur GitHub
+## GitHub publication
 
-**Statut : publié** — https://github.com/moinaalia/nikah-planner
+**Status: published** — https://github.com/moinaalia/nikah-planner
 
-Le code est en ligne sur la branche `main`. Vous pouvez envoyer les liens au professeur.
+Source code, screenshots, and the full English logbook are on the `main` branch.
 
 ---
 
-## Message à envoyer au professeur (copier-coller)
+## Email template for the instructor (copy-paste)
 
 ```
-Bonjour Professeur,
+Hello Professor,
 
-Voici mon projet de planification de mariage (Nikah Planner).
+Here is my wedding planning project (Nikah Planner).
 
-Profil GitHub : https://github.com/moinaalia
-Dépôt du projet : https://github.com/moinaalia/nikah-planner
+GitHub profile: https://github.com/moinaalia
+Project repository: https://github.com/moinaalia/nikah-planner
+Technical logbook (English, with screenshots): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.md
 
-Le dépôt contient :
-- Application mobile Flutter (Android) — 13 écrans, Firebase-ready
-- Prototype UI React (référence design)
-- Captures d'écran (dossier screenshots/)
-- README avec instructions d'installation et d'exécution
+The repository contains:
+- Flutter mobile app (Android) — 13 screens, Firebase-ready
+- React UI prototype (design reference)
+- Screenshots folder (screenshots/)
+- LOGBOOK.md — full CAT technical report with embedded screenshots
+- README with installation and run instructions
 
-(Rapport technique / logbook CAT : à envoyer séparément au professeur en PDF.)
-
-Pour tester l'application mobile :
-1. Cloner le dépôt
+To test the mobile app:
+1. Clone the repository
 2. cd nikah_planner
 3. flutter pub get
 4. flutter run
-(Mode démo : connexion avec n'importe quel email/mot de passe)
+(Demo mode: sign in with any email and password)
 
-Cordialement,
+Kind regards,
 Hadidja Aliani — BIT/2023/62116
 ```
 
-## Contenu du dépôt (vérification)
+## Repository contents (verification)
 
-### Application Flutter (`nikah_planner/`)
+### Flutter app (`nikah_planner/`)
 - Splash, Login, Register
-- Dashboard, Budget, Invités, Galerie
-- Planning, Invitations, Vendors, Profil
-- Notifications, Paramètres
-- Backend Firebase (Auth + Firestore) — mode démo sans config
+- Dashboard, Budget, Guests, Gallery
+- Schedule, Invitations, Vendors, Profile
+- Notifications, Settings
+- Firebase backend (Auth + Firestore) — demo mode without config
 
-### Prototype web (`src/`)
-- Interface React identique pour démonstration navigateur
-- `npm install` puis `npm run dev`
+### Web prototype (`src/`)
+- Same React UI for browser demonstration
+- `npm install` then `npm run dev`
 
-## Critères du projet couverts
+### Documentation
+- [LOGBOOK.md](LOGBOOK.md) — CAT technical report (English, screenshots included)
+- [screenshots/](screenshots/) — 9 UI screenshots
 
-- Collecte des besoins (contexte mariage islamique / malais)
-- Workflow métier (budget, invités, planning, vendors)
-- Défis identifiés (coordination, RSVP, budget)
-- Solution mobile pratique (Flutter)
-- Prototype fonctionnel / déployable
+## Project criteria covered
+
+- Requirements gathering (Islamic / Malay wedding context)
+- Business workflow (budget, guests, schedule, vendors)
+- Identified challenges (coordination, RSVP, budget)
+- Practical mobile solution (Flutter)
+- Functional / deployable prototype

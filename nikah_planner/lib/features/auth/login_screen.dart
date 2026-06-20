@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: const Text(
-                            'Local mode — create an account for your private workspace. Each email = a separate wedding.',
+                            'Demo mode — sign in with any email and password, or register for your own wedding workspace.',
                             style: TextStyle(color: AppColors.success, fontSize: 12),
                             textAlign: TextAlign.center,
                           ),
