@@ -70,19 +70,25 @@ const inline = {
   error: img("09_error.png", "Login error message", 280),
 };
 
-if (!md.includes("data:image/png;base64")) {
+if (!md.includes("**Screenshots (UI design):**")) {
   md = md.replace(
     "**Key files:** `lib/core/theme/`, `lib/core/widgets/wedding_widgets.dart`\n\n**Instructor mark:**",
     `**Key files:** \`lib/core/theme/\`, \`lib/core/widgets/wedding_widgets.dart\`\n\n**Screenshots (UI design):**\n\n${inline.ui}\n\n**Instructor mark:**`,
   );
+}
+if (!md.includes("**Screenshot (navigation / dashboard):**")) {
   md = md.replace(
-    "/schedule, /vendors, /profile, /settings, /notifications\n\`\`\`\n\n**Instructor mark:** ____________ / 4",
+    "/schedule, /vendors, /profile, /settings, /notifications\n```\n\n**Instructor mark:** ____________ / 4",
     `/schedule, /vendors, /profile, /settings, /notifications\n\`\`\`\n\n**Screenshot (navigation / dashboard):**\n\n${inline.nav}\n\n**Instructor mark:** ____________ / 4`,
   );
+}
+if (!md.includes("**Screenshots (event handling):**")) {
   md = md.replace(
     "**Files:** `login_screen.dart`, `register_screen.dart`, `guest_list_screen.dart`, `schedule_screen.dart`\n\n**Instructor mark:**",
     `**Files:** \`login_screen.dart\`, \`register_screen.dart\`, \`guest_list_screen.dart\`, \`schedule_screen.dart\`\n\n**Screenshots (event handling):**\n\n${inline.events}\n\n**Instructor mark:**`,
   );
+}
+if (!md.includes("**Screenshot (error handling):**")) {
   md = md.replace(
     "**File:** `lib/services/auth_service.dart` → `AuthResult` class\n\n**Instructor mark:** ____________ / 3",
     `**File:** \`lib/services/auth_service.dart\` → \`AuthResult\` class\n\n**Screenshot (error handling):**\n\n${inline.error}\n\n**Instructor mark:** ____________ / 3`,
