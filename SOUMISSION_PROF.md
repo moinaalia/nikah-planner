@@ -28,13 +28,13 @@ Here is my wedding planning project (Nikah Planner).
 
 GitHub profile: https://github.com/moinaalia
 Project repository: https://github.com/moinaalia/nikah-planner
-Technical logbook (Word, all screenshots inside): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.doc
-Technical logbook (Markdown on GitHub): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.md
+Complete logbook (Word — full text + all screenshots): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.doc
+Logbook preview (Markdown): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.md
 
 The repository contains:
 - Flutter mobile app (Android) — 13 screens, Firebase-ready
 - React UI prototype (design reference)
-- LOGBOOK.doc — complete CAT report (English, screenshots embedded)
+- LOGBOOK.doc — **complete CAT report** (English, all screenshots embedded inside the document)
 - LOGBOOK.md — same report readable on GitHub
 - README with installation and run instructions
 

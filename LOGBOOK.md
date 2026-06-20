@@ -6,7 +6,10 @@
 **Student ID:** BIT/2023/62116  
 **GitHub account:** [moinaalia](https://github.com/moinaalia)  
 **Source repository:** https://github.com/moinaalia/nikah-planner  
-**Submission date:** June 2026  
+**Submission date:** June 2026
+
+> **Complete document (recommended):** Download **[LOGBOOK.doc](LOGBOOK.doc)** — full English report with all screenshots embedded.
+
 
 ---
 
@@ -539,7 +542,7 @@ Nikah Planner illustrates this design:
 | Source code | https://github.com/moinaalia/nikah-planner |
 | GitHub profile | https://github.com/moinaalia |
 | README | https://github.com/moinaalia/nikah-planner#readme |
-| Technical report / logbook | [LOGBOOK.md](LOGBOOK.md) (this document on GitHub) |
+| Complete report (Word) | [LOGBOOK.doc](LOGBOOK.doc) — full text + embedded screenshots |
 
 ### B. CAT submission checklist
 
@@ -553,7 +556,7 @@ Nikah Planner illustrates this design:
 ```
 nikah-planner/
 ├── nikah_planner/     ← Flutter app (main CAT deliverable)
-├── LOGBOOK.md         ← Technical report (English)
+├── LOGBOOK.doc        ← Complete CAT report (Word)
 ├── src/               ← React prototype
 ├── README.md
 ├── LOGBOOK.md         ← CAT technical report (English, with screenshots)

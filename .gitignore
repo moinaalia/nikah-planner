@@ -45,6 +45,8 @@ nikah_planner/lib/core/data/wedding_personal.dart
 nikah_planner/UTILISATION_PERSONNELLE.md
 
 # Logbook local exports (GitHub: LOGBOOK.md + LOGBOOK.doc)
+~$*.doc
+LOGBOOK_WORD.doc
 JOURNAL_DE_BORD.md
 JOURNAL_DE_BORD.pdf
 JOURNAL_DE_BORD.html
