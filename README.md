@@ -53,4 +53,8 @@ Student / educational project.
 
 ## For reviewers / professors
 
-See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for project summary, verification checklist, and email template.
+| Document | Link |
+|----------|------|
+| **CAT logbook (PDF)** | [LOGBOOK.pdf](LOGBOOK.pdf) |
+
+See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for the email template.
