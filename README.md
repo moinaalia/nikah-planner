@@ -64,8 +64,7 @@ Student / educational project.
 
 ## For reviewers / professors
 
-| Document | Link |
-|----------|------|
-| **CAT logbook template (Word)** | [LOGBOOK_A_REMPLIR.doc](LOGBOOK_A_REMPLIR.doc) — full report text; add screenshots in Word, then export to PDF |
+The **CAT logbook PDF** is uploaded manually by the student to this repository (`LOGBOOK.pdf`).  
+See [LOGBOOK_INSTRUCTIONS.md](LOGBOOK_INSTRUCTIONS.md) for upload steps.
 
 See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for the email template.

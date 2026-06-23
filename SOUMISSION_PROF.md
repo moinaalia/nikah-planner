@@ -15,8 +15,8 @@
 
 **Status: published** — https://github.com/moinaalia/nikah-planner
 
-The repository contains the **source code** and the **logbook Word template** (`LOGBOOK_A_REMPLIR.doc`).  
-Students complete screenshots in Word, export PDF, and submit to the instructor (upload to GitHub or email).
+The repository contains the **source code**.  
+The student uploads their own **LOGBOOK.pdf** manually on GitHub when ready (see [LOGBOOK_INSTRUCTIONS.md](LOGBOOK_INSTRUCTIONS.md)).
 
 ---
 
@@ -29,15 +29,16 @@ Here is my wedding planning project (Nikah Planner).
 
 GitHub profile: https://github.com/moinaalia
 Project repository: https://github.com/moinaalia/nikah-planner
-Logbook template (Word): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK_A_REMPLIR.doc
+
+(After I upload my logbook PDF on GitHub:)
+Logbook PDF: https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.pdf
 
 The repository contains:
 - Flutter mobile app (Android) — 13 screens, Firebase-ready
 - React UI prototype (design reference)
-- LOGBOOK_A_REMPLIR.doc — CAT report template (screenshots added in Word)
 - README with installation and run instructions
 
-I am attaching my completed logbook PDF separately (or uploaded to the repository).
+My completed CAT logbook PDF is on the repository (or attached by email).
 
 To test the mobile app:
 1. Clone the repository

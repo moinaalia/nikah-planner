@@ -1,37 +1,32 @@
-# How to complete and upload your logbook (GitHub)
+# Upload your logbook PDF to GitHub (manual)
 
-## 1. Download the template
+You already created **LOGBOOK.pdf** on your computer.  
+**We do not upload it for you** — follow these steps on GitHub.
 
-**[LOGBOOK_A_REMPLIR.doc](LOGBOOK_A_REMPLIR.doc)** — full English CAT report with **empty boxes** for screenshots.
+## Steps
 
-On GitHub: open the file → **Download** (or **View raw**).
+1. Open **https://github.com/moinaalia/nikah-planner**
+2. Sign in as **moinaalia**
+3. Click **Add file** (top right, above the file list) → **Upload files**
+4. Drag your **LOGBOOK.pdf** or click **choose your files**
+5. Scroll down → message: `Add LOGBOOK.pdf`
+6. Click **Commit changes**
 
-## 2. Open in Microsoft Word
+## Your PDF link after upload
 
-Do **not** open in Cursor/VS Code — use **Microsoft Word**.
+```
+https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.pdf
+```
 
-## 3. Insert screenshots manually
+Send this link to your professor with the repository link:
 
-For each dashed box:
+```
+https://github.com/moinaalia/nikah-planner
+```
 
-1. **Insert** → **Pictures** → **This Device**
-2. Choose the matching PNG (e.g. `01_splash.png`, `02_login.png`, …)
-3. Resize to fit the box (~6 cm width)
+## Alternative
 
-Screenshots are in the project `screenshots/` folder (or capture from the app).
-
-## 4. Export to PDF
-
-**File** → **Save As** → **PDF** → name: `LOGBOOK.pdf`
-
-## 5. Upload your finished PDF to GitHub (manual)
-
-1. Go to https://github.com/moinaalia/nikah-planner
-2. **Add file** → **Upload files**
-3. Upload your completed **LOGBOOK.pdf**
-4. **Commit changes**
-
-Or send the PDF to your instructor by email.
+Email **LOGBOOK.pdf** to your instructor as an attachment (no GitHub upload).
 
 ---
 
