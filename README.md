@@ -9,6 +9,7 @@ Elegant, Islamic-friendly wedding planning application with a **Flutter Android 
 | Folder | Stack | Description |
 |--------|-------|-------------|
 | `nikah_planner/` | Flutter + Firebase | Full mobile app (13 screens) |
+| `student_attendance/` | Flutter + SQLite | **Week 6–7 mini project** — student attendance manager |
 | `src/` | React + Vite + Tailwind | Web UI prototype / design reference |
 
 ## Quick Start
@@ -22,6 +23,16 @@ flutter run
 ```
 
 Demo mode: sign in with any email and password (no Firebase required).
+
+### Student attendance app (Week 6–7 mini project)
+
+```bash
+cd student_attendance
+flutter pub get
+flutter run
+```
+
+SQLite database: register students, mark attendance, generate reports.
 
 ### React prototype (web)
 
@@ -53,4 +64,9 @@ Student / educational project.
 
 ## For reviewers / professors
 
-See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for project summary, verification checklist, and email template.
+| Document | Link |
+|----------|------|
+| **CAT logbook (Word)** | [LOGBOOK.doc](LOGBOOK.doc) |
+| **CAT logbook (PDF)** | [LOGBOOK.pdf](LOGBOOK.pdf) |
+
+See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for the email template.

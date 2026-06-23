@@ -29,13 +29,16 @@ Here is my wedding planning project (Nikah Planner).
 
 GitHub profile: https://github.com/moinaalia
 Project repository: https://github.com/moinaalia/nikah-planner
+CAT logbook (Word): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.doc
+CAT logbook (PDF): https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.pdf
 
 The repository contains:
 - Flutter mobile app (Android) — 13 screens, Firebase-ready
 - React UI prototype (design reference)
 - README with installation and run instructions
+- LOGBOOK.doc / LOGBOOK.pdf — CAT technical report (download from GitHub)
 
-I am attaching my CAT logbook (Word document) separately by email.
+I am also attaching my logbook separately by email if required.
 
 To test the mobile app:
 1. Clone the repository
