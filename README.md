@@ -66,7 +66,6 @@ Student / educational project.
 
 | Document | Link |
 |----------|------|
-| **CAT logbook (Word)** | [LOGBOOK.doc](LOGBOOK.doc) |
-| **CAT logbook (PDF)** | [LOGBOOK.pdf](LOGBOOK.pdf) |
+| **CAT logbook template (Word)** | [LOGBOOK_A_REMPLIR.doc](LOGBOOK_A_REMPLIR.doc) — full report text; add screenshots in Word, then export to PDF |
 
 See [SOUMISSION_PROF.md](SOUMISSION_PROF.md) for the email template.
