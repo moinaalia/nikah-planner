@@ -1,32 +1,22 @@
-# Upload your logbook PDF to GitHub (manual)
+# Logbook on GitHub
 
-You already created **LOGBOOK.pdf** on your computer.  
-**We do not upload it for you** — follow these steps on GitHub.
+**LOGBOOK.pdf** is on the repository:
 
-## Steps
-
-1. Open **https://github.com/moinaalia/nikah-planner**
-2. Sign in as **moinaalia**
-3. Click **Add file** (top right, above the file list) → **Upload files**
-4. Drag your **LOGBOOK.pdf** or click **choose your files**
-5. Scroll down → message: `Add LOGBOOK.pdf`
-6. Click **Commit changes**
-
-## Your PDF link after upload
-
-```
 https://github.com/moinaalia/nikah-planner/blob/main/LOGBOOK.pdf
+
+It covers Weeks 1–7, **Task 2** (database design), and **Task 3** (student attendance mini project).
+
+## Regenerate locally (optional)
+
+```bash
+node scripts/generate_logbook_pdf.mjs
 ```
 
-Send this link to your professor with the repository link:
-
-```
-https://github.com/moinaalia/nikah-planner
-```
+Then force-add: `git add -f LOGBOOK.pdf`
 
 ## Alternative
 
-Email **LOGBOOK.pdf** to your instructor as an attachment (no GitHub upload).
+Email **LOGBOOK.pdf** to your instructor as an attachment.
 
 ---
 
